@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Time tracking App</title>
+  <link rel="icon" href="images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/Normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="info">
+
+      <div class="name">
+        <img src="images/image-jeremy.png" alt="">
+        <div>
+          <p class="repo">Report for</p>
+          <p id="name">Jeremy</p>
+          <p class="lastName">Robson</p>
+        </div>
+      </div>
+      <ul>
+        <li id="daily">daily</li>
+        <li id="weakly">weakly</li>
+        <li id="monthly">monthly</li>
+      </ul>
+    </div>
+
+    <div class="grid">
+      <div class="box work">
+        <div class="background">
+          <div class="content">
+            <div class="head">
+              <p class="title">work</p>
+              <div class="logo">
+                <div class="one"></div>
+                <div class="two"></div>
+                <div class="three"></div>
+              </div>
+            </div>
+            <p class="hours" id="work-hours">5hrs</p>
+            <span class="Last Day" id="work-day">Last Day-</span>
+            <span id="work-time">7hrs</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="box play">
+        <div class="background">
+          <div class="content">
+            <div class="head">
+              <p class="title">play</p>
+              <div class="logo">
+                <div class="one"></div>
+                <div class="two"></div>
+                <div class="three"></div>
+              </div>
+            </div>
+            <p class="hours" id="play-hours">1hrs</p>
+            <span class="Last Day" id="Play-day">Last Day-</span>
+            <span id="play-time">2hrs</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="box study">
+        <div class="background">
+          <div class="content">
+            <div class="head">
+              <p class="title">study</p>
+              <div class="logo">
+                <div class="one"></div>
+                <div class="two"></div>
+                <div class="three"></div>
+              </div>
+            </div>
+            <p class="hours" id="study-hours">0hrs</p>
+            <span class="Last Day" id="study-day">Last Day-</span>
+            <span id="study-time">1hrs</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="box exercise">
+        <div class="background">
+          <div class="content">
+            <div class="head">
+              <p class="title">exercise</p>
+              <div class="logo">
+                <div class="one"></div>
+                <div class="two"></div>
+                <div class="three"></div>
+              </div>
+            </div>
+            <p class="hours" id="exercise-hours">1hrs</p>
+            <span class="Last Day" id="exercise-day">Last Day-</span>
+            <span id="exercise-time">1hrs</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="box social">
+        <div class="background">
+          <div class="content">
+            <div class="head">
+              <p class="title">social</p>
+              <div class="logo">
+                <div class="one"></div>
+                <div class="two"></div>
+                <div class="three"></div>
+              </div>
+            </div>
+            <p class="hours" id="social-hours">1hrs</p>
+            <span class="Last Day" id="social-day">Last Day-</span>
+            <span id="social-time">3hrs</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="box care">
+        <div class="background">
+          <div class="content">
+            <div class="head">
+              <p class="title">self care</p>
+              <div class="logo">
+                <div class="one"></div>
+                <div class="two"></div>
+                <div class="three"></div>
+              </div>
+            </div>
+            <p class="hours" id="care-hours">0hrs</p>
+            <span class="Last Day" id="care-day">Last Day-</span>
+            <span id="care-time">1hrs</span>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

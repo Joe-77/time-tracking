@@ -1,0 +1,228 @@
+/* Start Global Rules */
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --Blue: hsl(246, 80%, 60%);
+  --Light-red-Work: hsl(15, 100%, 70%);
+  --Soft-blue-Play: hsl(195, 74%, 62%);
+  --Light-red-Study: hsl(348, 100%, 68%);
+  --Lime-green-Exercise: hsl(145, 58%, 55%);
+  --Violet-Social: hsl(264, 64%, 52%);
+  --Soft-orange-self-care: hsl(43, 84%, 65%);
+  --Very-dark-blue: hsl(226, 43%, 10%);
+  --Dark-blue: hsl(235, 46%, 20%);
+  --Desaturated-blue: hsl(235, 45%, 61%);
+  --Pale-Blue: hsl(236, 100%, 87%);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+ul {
+  list-style: none;
+}
+body {
+  scroll-behavior: smooth;
+  background-color: #0d1323;
+}
+/* End Global Rules */
+
+/* Start Container */
+.container {
+  min-height: 100vh;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.container img {
+  width: 40px;
+}
+.container .info {
+  width: 150px;
+}
+.container .info .name {
+  background-color: hsl(246.22deg 79.61% 59.61%);
+  padding: 20px;
+  border-radius: 5px;
+}
+.container .info .name .repo {
+  padding: 15px 0 10px;
+  font-size: 10px;
+  color: #bdc1ff;
+}
+.container .info .name #name,
+.lastName {
+  font-size: 24px;
+  color: white;
+  font-weight: 500;
+}
+.lastName {
+  padding-bottom: 10px;
+}
+.container .info ul {
+  border-radius: 8px;
+  background-color: #1d204b;
+  padding: 30px 30px 33px 30px;
+}
+.container .info ul li:not(:first-child) {
+  margin-top: 10px;
+}
+.container .info ul li {
+  text-transform: capitalize;
+  cursor: pointer;
+  color: #454a82;
+  transition: 0.5s;
+  user-select: none;
+}
+#daily {
+  color: white;
+}
+.container .info ul li:hover {
+  color: white;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  width: 600px;
+  column-gap: 20px;
+  row-gap: 50px;
+}
+.background {
+  position: relative;
+  width: 100%;
+  height: 150px;
+}
+.grid .work .background {
+  background-color: var(--Light-red-Work);
+  background-image: url(../images/icon-work.svg);
+  background-repeat: no-repeat;
+  background-position: right top;
+}
+.grid .play .background {
+  background-color: var(--Soft-blue-Play);
+  background-image: url(../images/icon-play.svg);
+  background-repeat: no-repeat;
+  background-position: right top;
+}
+.grid .study .background {
+  background-color: var(--Light-red-Study);
+  background-image: url(../images/icon-study.svg);
+  background-repeat: no-repeat;
+  background-position: right top;
+}
+.grid .exercise .background {
+  background-color: var(--Lime-green-Exercise);
+  background-image: url(../images/icon-exercise.svg);
+  background-repeat: no-repeat;
+  background-position: right top;
+}
+.grid .social .background {
+  background-color: var(--Violet-Social);
+  background-image: url(../images/icon-social.svg);
+  background-repeat: no-repeat;
+  background-position: right top;
+}
+.grid .care .background {
+  background-color: var(--Soft-orange-self-care);
+  background-image: url(../images/icon-self-care.svg);
+  background-repeat: no-repeat;
+  background-position: right top;
+}
+.grid .box .content {
+  background-color: #1d204b;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 5px;
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.6s;
+}
+.grid .box .content:hover {
+  top: 35px;
+}
+.grid .box .head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.grid .box .head .title {
+  color: white;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  font-size: 18px;
+}
+.grid .box .head .logo div {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 2px;
+  border-radius: 50%;
+  background-color: gray;
+  cursor: pointer;
+  animation-name: up-down;
+  animation-duration: 0.9s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+.logo .two {
+  transition-delay: 0.3s !important;
+}
+.logo .three {
+  transition-delay: 0.6s !important;
+}
+@keyframes up-down {
+  to {
+    opacity: 0.3;
+  }
+}
+.grid .box .hours {
+  color: white;
+  font-size: 40px;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+.grid .box .Last,
+.grid .box span {
+  color: #454a82;
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+/* End Container */
+
+@media (max-width: 500px) {
+  .grid {
+    grid-template-columns: minmax(200px, 1fr);
+    width: auto;
+  }
+}
+
+@media (min-width: 500px) and (max-width: 767px) {
+  .grid {
+    width: 450px;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    flex-direction: column;
+  }
+  .container .info .name {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .container .info {
+    width: auto;
+  }
+  .container .info ul {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+}
